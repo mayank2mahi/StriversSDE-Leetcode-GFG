@@ -21,3 +21,16 @@ public:
             nums[i] = 2;
     }
 };
+
+//method 2
+//we can use STL
+//.e.
+
+class Solution
+{
+public:
+    void sortColors(vector<int> &nums)
+    {
+       sort(nums,nums+nums.size());
+    }
+};
