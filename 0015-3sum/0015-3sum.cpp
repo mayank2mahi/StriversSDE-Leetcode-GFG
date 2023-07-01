@@ -22,7 +22,7 @@
 //     }
 // };
 
-// Optimal Solution
+// Optimal Solution (TWO POINTER APPROACH)
 
 class Solution {
 public:
