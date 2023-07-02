@@ -15,7 +15,7 @@
 //     }
 // };
 
-// Optimal Solution
+// Optimal Solution (TWO POINTER APPROACH)
 
 #include <bits/stdc++.h>
 using namespace std;
