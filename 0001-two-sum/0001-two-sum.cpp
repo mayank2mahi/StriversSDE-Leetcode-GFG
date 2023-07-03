@@ -1,4 +1,4 @@
-// Brute Forc
+// Brute Force
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
