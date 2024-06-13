@@ -1,22 +1,22 @@
 class Solution {
 public:
     int climbStairs(int n) {
-        vector<int> memo(n + 1, -1);
-        return solve(n, memo);
-    }
-
-private:
-    int solve(int n, vector<int>& memo) {
-        if (n < 0) {
-            return 0;
+        
+        if(n == 1 || n == 2 || n == 3){
+            return n;
         }
-        if (n == 0) {
-            return 1;
+        
+        vector<int> v(n+1);               // BOTTOM UP APPROACH
+        
+        v[0] = 0;
+        v[1] = 1;
+        v[2] = 2;
+        
+        for(int i = 3; i <= n; i++){
+            v[i] = v[i-1] + v[i-2];
         }
-        if (memo[n] != -1) {
-            return memo[n];
-        }
-        memo[n] = solve(n - 1, memo) + solve(n - 2, memo);
-        return memo[n];
+        
+        return v[n];
+        
     }
 };
