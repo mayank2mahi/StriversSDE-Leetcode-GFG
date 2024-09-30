@@ -8,3 +8,8 @@ public:
         reverse(nums.begin() + k, nums.end()); // Reverse the remaining elements
     }
 };
+
+// Consider an array: nums = [1, 2, 3, 4, 5] with n = 5 (size of the array).
+
+// Case 1: Rotate the array by k = 7 positions.
+// If we were to rotate the array 7 times, it would behave the same as rotating it by k % n = 7 % 5 = 2 times.
