@@ -1,17 +1,17 @@
 class Solution {
 public:
     int thirdMax(vector<int>& nums) {
-        map<int, int> mp;
-        for (int i = 0; i < nums.size(); i++) {
-            mp[nums[i]]++;
+        set<int, greater<int>> st;
+        for(int i = 0; i < nums.size(); i++){
+            st.insert(nums[i]);
         }
-        if (mp.size() < 3) {
-            return mp.rbegin()->first;
+        if (st.size() < 3) {
+            return *st.begin();
         }
         int c = 0;
-        for (auto i = mp.rbegin(); i != mp.rend(); i++) {
+        for (auto i : st) {
             if (c == 2) {
-                return i->first;
+                return i;
             }
             c++;
         }
