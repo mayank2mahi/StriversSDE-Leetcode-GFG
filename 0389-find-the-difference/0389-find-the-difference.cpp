@@ -5,7 +5,7 @@ public:
         for(int i = 0; i < s.size(); i++){
             mp[s[i]]++;
         }
-        for (char i : t) {
+        for (auto i : t) {
             mp[i]--;
             if (mp[i] < 0) {
                 return i;
