@@ -8,7 +8,7 @@ public:
         for(int i=1;i<words.size();i++){
             vector<int>temp(26,0);
             
-            for(int j=0;j<words[0].size();j++){
+            for(int j=0;j<words[i].size();j++){
                  temp[words[i][j]-'a']++;
             }
             
