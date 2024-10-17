@@ -1,31 +1,17 @@
 class Solution {
 public:
     string reverseWords(string s) {
-        vector<string> senti;
+        
+        stringstream dj(s);
         string word;
-        for(int i = 0; i < s.size(); i++){
-            if(isalnum(s[i])){
-                word += s[i];
+        string ans;
+        
+        while(dj >> word){
+            if(!ans.empty()){
+                word = word + " ";
             }
-            else if(!word.empty()){
-                senti.push_back(word);
-                word = "";
-            }
+            ans = word + ans;
         }
-        if(!word.empty()){
-            senti.push_back(word);
-        }
-
-        reverse(senti.begin(), senti.end());
-
-        string r;
-        for(string w : senti){
-            r += w + " ";
-        }
-        if(!r.empty()){
-            r.pop_back();
-        }
-
-        return r;
+        return ans;
     }
 };
